@@ -1,9 +1,3 @@
-$fz: 17px
-
-@function pxToRem($size) 
-  $remSize: calc($size / $fz)
-  @return $remSize * 1rem
-
 // Config
 @import ./config/_fonts
 @import ./config/_var
@@ -16,6 +10,7 @@ $fz: 17px
 @import ./modules/home/_about
 @import ./modules/home/_questes
 @import ./modules/home/_services
+@import ./modules/services/_services_detail
 @import ./modules/_footer
 
 @import ./modules/_stub
@@ -23,5 +18,5 @@ $fz: 17px
 // Media
 @import ./modules/media_query/_min_width_1440
 @import ./modules/media_query/_max_width_992
-@import ./modules/media_query/_max_width_768
+@import ./modules/media_query/_max_width_920
 @import ./modules/media_query/_max_width_576

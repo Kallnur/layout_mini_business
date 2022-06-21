@@ -1,0 +1,10 @@
+extends ../template.pug
+block content 
+    section.services-about.pt-5
+        .my-container.container
+            .services-about__title-block
+                h1.services-about__title 
+                    |Разрабатываем маркетинг-план: дорожная карта достижения целей
+            ul.services-about__list
+                +infoListItem(servicesAboutItems, 'services-about__item')
+             

@@ -1,0 +1,46 @@
+.services 
+    &-about
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            width: 50%
+            height: 100%
+            background-image: url('../assets/icons/cubesBg.svg')
+            background-size: 100% 100%
+            background-repeat: no-repeat
+            top: 0
+            right: 0
+            transform: translateX(15%)
+            z-index: -1
+
+        &__title 
+            font-size: $fs-1
+            text-transform: none
+
+            &-block
+                position: relative
+
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 50%
+                    height: 100%
+                    background-image: url('../assets/icons/poliRect.svg')
+                    background-repeat: no-repeat
+                    transform: translateX(-4%) translateY(-27%)
+                    z-index: -1
+                    
+
+        &__list
+            margin-top: 33px
+            +flex(column, center, flex-start)
+            gap: 14px
+
+        &__item
+            display: flex
+            gap: 40px
+            +font('Roboto', 400, $fs-3-9)
+
+            & img
+                width: 23px

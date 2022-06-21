@@ -6,6 +6,13 @@ mixin navListItem(arr, className)
                     img(src= item.imgUrl, alt="img")
                 span #{item.text}
 
+mixin infoListItem(arr, className)
+    each item in arr
+        li(class=className)
+            - if(item.imgUrl)
+                img(src= item.imgUrl, alt="img")
+            span #{item.text}
+
 mixin iconListItems(className, fillColor)
     li(class = className)
         a(class = className + "-link icon-link-facebook", href='https://exemple.com')
