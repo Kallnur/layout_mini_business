@@ -1,6 +1,12 @@
 extends ../template.pug
+block crumbs 
+    include ../config/crumbsInfo
+        ul.crumbs__list.ps-0.m-0
+            +crumbsItem(crumbTrainings, 'crumbs__item')
 block content 
-    .my-container.container
-        h1 trains
+    .training 
+        .my-container.container
+            include ../config/trainingCardInfo 
+                ul.training__list
+                    +trainingCart(trainingCardInfo, 'training__item')
         
-    include ../includes/stub/stub

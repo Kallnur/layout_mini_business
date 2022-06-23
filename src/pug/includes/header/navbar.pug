@@ -9,5 +9,6 @@ ul.header__icon-list.col-2.p-0.m-0
     +iconListItems('header__icon-item', "#282C37")
 
 .header__burger.col-8
-    include ./burger
+    button(class="hamburger", type="button")
+        img(src="./assets/icons/burger.svg", alt="burger")
 include ./mobile_navbar

@@ -1,0 +1,43 @@
+.get-consultation
+    padding: 125px 0 92px
+    position: relative
+    +flex($jc: center, $ai: center)
+
+    &::before
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        content: ''
+        background-image: url('../assets/icons/bigRectBg.svg') 
+        background-size: 100% 79%
+        background-position: -16px 50%
+        background-repeat: no-repeat
+        z-index: -1
+
+    &__form-block
+        width: 45%
+        border-radius: 20px
+        background: $white-color
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, .2)
+
+    &__form-body 
+        padding: 78px 58px
+        +flex(column, space-between, center)
+        gap: 21px
+
+        & input
+            width: 100%
+            padding: 12px 21px
+            border: 1px solid $sec-text-color !important
+            border-radius: 8px
+            font-style: italic
+            font-size: $fs-3-5
+
+        & button 
+            background: $btn-green-color
+            color: $white-color
+            padding: 12px 0
+            border-radius: 8px
+            font-size: $fs-4

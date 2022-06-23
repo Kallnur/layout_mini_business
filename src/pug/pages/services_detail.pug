@@ -1,10 +1,30 @@
 extends ../template.pug
+block crumbs 
+    include ../config/crumbsInfo
+        ul.crumbs__list.ps-0.m-0
+            +crumbsItem(crumbServicesDetail, 'crumbs__item')
 block content 
-    section.services-about.pt-5
+    section.services-about
         .my-container.container
             .services-about__title-block
                 h1.services-about__title 
                     |Разрабатываем маркетинг-план: дорожная карта достижения целей
             ul.services-about__list
                 +infoListItem(servicesAboutItems, 'services-about__item')
-             
+
+    include ../config/businessProgramInfo
+        section.services-detail
+            .my-container.container
+                .services-detail__title-block
+                    h1.services-detail__title Описание услуги
+                .services-detail__info-block.ps-4
+                    span.services-detail__info-text Любая компания ставит себе цель непрерывного развития, которая отражается в итоговом плане действий по ее достижению. Основным измерением достижения цели является рост прибыли по результатам планируемого периода. Понимание траектории развития рынка, положения и стратегий его основных участников, позволяет правильно оценить свои возможности и поставить объективно достижимые цели. 
+                    span.services-detail__info-text Конкретный план действий по достижению целей разрабатывается на основе потребительских трендов и прогноза действий конкурентов.
+                    span.services-detail__info-text Математическая модель контроля позволяет на основе сравнения плановых и фактических измеряемых величин контролировать ситуацию и своевременно предпринимать необходимые действия.
+                    span.services-detail__info-text.mb-2
+                        |Основные этапы разработки 
+                        a(href="#") маркетинг-плана: 
+                    ul.services-detail__list
+                        +infoListItem(detailServicesList, 'services-detail__item')
+                        
+    include ../includes/form/getConsul
