@@ -6,12 +6,12 @@ export const validateForm = (e) => {
     // Накидано за последние 10мин + стили...... ведутся работы
 
     const blockInputs = document.querySelectorAll('.modal-help__inp-block');
-    const userName = document.querySelector('#helpModalName');
-    const userEmail = document.querySelector('#helpModalEmail');
-    const userMess = document.querySelector('#helpModalMess');
-    const disBtn = document.querySelector('.modal-help__btn--load');
+    const userName    = document.querySelector('#helpModalName');
+    const userEmail   = document.querySelector('#helpModalEmail');
+    const userMess    = document.querySelector('#helpModalMess');
+    const disBtn      = document.querySelector('.modal-help__btn--load');
     const txtFoemDone = document.querySelector('.form-done');
-    const modalHelp     = document.querySelector('.modal-help');
+    const modalHelp   = document.querySelector('.modal-help');
 
     if(userName.value.length >= 2 && userMess.value.length >= 5 && userEmail.value.length >= 5) {
         clearClass(blockInputs, 'modal-help__inp-block--warn');

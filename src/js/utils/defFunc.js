@@ -1,18 +1,21 @@
 export const stopScroll = () => {
     if(document.body.style.overflow === 'hidden') document.body.style.overflow = ''
     else document.body.style.overflow = 'hidden';
-    console.log('asdasd');
 }
 
 export const toggleClass = (openBtn, closeBtn, toggleElement, activeClass) => {
 
-    const toggleClassActive = () => {
-        toggleElement.classList.toggle(activeClass);
+    const addClassActive = () => {
+        toggleElement.classList.add(activeClass);
+        stopScroll();
+    };
+    const removeClassActive = () => {
+        toggleElement.classList.remove(activeClass);
         stopScroll();
     };
 
-    openBtn?.addEventListener('click', toggleClassActive);
-    closeBtn?.addEventListener('click', toggleClassActive);
+    openBtn?.addEventListener('click', addClassActive);
+    closeBtn?.addEventListener('click', removeClassActive);
 }
 
 export const clearClass = (arr, className) => {
