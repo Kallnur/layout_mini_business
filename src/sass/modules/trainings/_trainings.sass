@@ -1,0 +1,44 @@
+.training
+    position: relative
+    padding: 28px 0 42px
+
+    &__item 
+        box-shadow: 4px 4px 14px rgba(0, 0, 0, .15)
+        border-radius: 20px
+        padding: 38px 30px
+        +flex(row, center, flex-start)
+        background: $white-color
+        margin-bottom: 40px
+
+        &-title-block
+            +flex(column, center, flex-start) 
+            gap: 24px
+
+        &-title
+            +font('Montserrat', 700, $fs-2)
+            text-transform: none
+
+        &-descs
+            +flex(column, center, flex-start)
+            & img
+                width: 23px
+        &-desc
+            +flex(row, center, start)
+            margin-bottom: 11px
+            gap: 40px
+            line-height: 20px
+            +font
+        &-btn 
+            padding: 12px 24px
+            background: $btn-blue-color
+            +font('Montserrat', 700, $fs-4)
+            text-transform: uppercase
+            transition: .2s
+            border: none
+
+            &:hover
+                background: $btn-blue-active
+                border-color: $btn-blue-active
+
+            & img
+                margin-left: 50px

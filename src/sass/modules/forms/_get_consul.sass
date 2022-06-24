@@ -1,7 +1,6 @@
 .get-consultation
     padding: 125px 0 92px
     position: relative
-    +flex($jc: center, $ai: center)
 
     &::before
         position: absolute
@@ -21,10 +20,11 @@
         border-radius: 20px
         background: $white-color
         box-shadow: 2px 2px 12px rgba(0, 0, 0, .2)
+        margin: 0 auto
 
     &__form-body 
         padding: 78px 58px
-        +flex(column, space-between, center)
+        // +flex(column, space-between, center)
         gap: 21px
 
         & input
@@ -41,3 +41,7 @@
             padding: 12px 0
             border-radius: 8px
             font-size: $fs-4
+
+            &:hover
+                color: $white-color
+                background: $btn-green-active

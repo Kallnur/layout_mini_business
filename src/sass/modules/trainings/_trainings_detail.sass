@@ -1,0 +1,74 @@
+.training
+    &-about
+        padding: 20px 0 100px
+        &__title
+            font-size: $fs-1
+            text-transform: none
+
+        &__subtitle
+            +font($fs: $fs-3-5)
+            display: block
+            text-transform: none
+
+        &__list
+            +flex(column, center, flex-start)
+            gap: 12px
+            margin: 25px 0 50px
+
+            & img 
+                width: 23px
+
+        &__item 
+            +flex(row, center, center)
+            gap: 40px
+
+        &__btn button 
+            padding: 14px 75px
+            background: $btn-green-color
+            margin-left: 2rem
+
+            & img 
+                transform: translateX(43px)
+
+    &-detail
+        padding-top: 60px
+        position: relative
+        overflow-x: hidden
+
+        &__title 
+            font-size: $fs-2
+            margin-bottom: 45px
+
+        &__item
+            &-title
+                +font('Montserrat', 700, calc($fs-3 - 2px))
+
+            &-descs
+                margin: 20px 0 38px
+                padding-left: 70px
+
+            &-desc
+                position: relative
+                margin-bottom: 12px
+
+                & .info-list-mark
+                    top: 0
+                    transform: translateY(70%) translateX(-100%)
+
+                & span
+                    line-height: 20px
+                    +font('Lato', 400, $fs-3-9)
+
+            & .no-mark-list
+                padding-left: calc(70px - 2rem)
+
+        &::before 
+            position: absolute
+            top: 45%
+            right: 0
+            transform: translateX(18%)
+            content: ''
+            width: 250px
+            height: 250px
+            background-image: url('../assets/icons/cubes.svg')
+            background-repeat: no-repeat

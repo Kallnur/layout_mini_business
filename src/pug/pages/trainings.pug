@@ -7,6 +7,7 @@ block content
     .training 
         .my-container.container
             include ../config/trainingCardInfo 
-                ul.training__list
+                ul.training__list.p-0
                     +trainingCart(trainingCardInfo, 'training__item')
-        
+    .cube-bg
+        img(src=bgCubes, alt="cubes") 

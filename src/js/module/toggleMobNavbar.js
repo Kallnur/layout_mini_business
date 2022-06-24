@@ -1,22 +1,11 @@
+import { toggleClass } from "../utils/defFunc.js";
+
 export const toggleMobNavbar = () => {
-    const btnsBurger = document.querySelectorAll('.hamburger');
+    const btnOpenNav  = document.querySelector('.hamburger');
+    const btnCloseNav = document.querySelector('.mob-nav__close-btn');
     const mobNavbar = document.querySelector('.header__mob-nav');
 
-    const btnActiveClass = 'burger-active';
-    const navActiveClass = 'header__mob-nav--active';
+    const activeClass = 'header__mob-nav--active';
 
-    Array.from(btnsBurger).forEach(btn => {
-        btn.addEventListener('click', () => {
-            if(!btnsBurger[0].classList.contains(btnActiveClass)){
-                btnsBurger[0].classList.add(btnActiveClass);
-                mobNavbar.classList.add(navActiveClass);
-                document.body.style.overflow = 'hidden';
-            }
-            else{
-                btnsBurger[0].classList.remove(btnActiveClass);
-                mobNavbar.classList.remove(navActiveClass);
-                document.body.style.overflow = '';
-            }
-        })
-    })
+    toggleClass(btnOpenNav, btnCloseNav, mobNavbar, activeClass);
 }

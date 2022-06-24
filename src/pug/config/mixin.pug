@@ -12,7 +12,8 @@ mixin infoListItem(arr, className)
             if(item.imgUrl)
                 img(src= item.imgUrl, alt="img")
             else 
-                .info-list-mark
+                if(item.noMark != true)
+                    .info-list-mark
             span #{item.text}
             if(item.link)
                 a(href=item.link)  #{item.linkText} 
@@ -41,11 +42,22 @@ mixin crumbsItem(arr, className)
 
 mixin trainingCart(arr, className)
     each item in arr 
-        li(class=className)
-            div(class=className + '-title-blcok')
+        li(class=className + ' row justify-content-start')
+            div(class=className + '-title-block col-6 pe-lg-5')
                 h2(class=className + '-title') #{item.title}
-                span(class=className + '-subtitle') #{item.subtitle}
-                button(class=className + '-btn btn btn-primary') Подробнее
+                span(class=className + '-subtitle mb-2') #{item.subtitle}
+                a(class=className + '-btn btn btn-primary', href='./trainings_detail.html') Подробнее
                     img(src=iconRightArrow, alt="icon")
-            ul(class=className + '-descs')
+            ul(class=className + '-descs col-6 pe-lg-5 pt-3')
                 +infoListItem(item.list, className + '-desc')
+
+mixin businessProgramItem(arr, className)
+    each item in arr 
+        li(class=className)
+            strong(class=className + '-title') #{item.title}
+            if(item.noMark != true)
+                ul(class=className + '-descs')
+                    +infoListItem(item.list, className+'-desc')
+            else 
+                ul(class=className + '-descs no-mark-list')
+                    +infoListItem(item.list, className+'-desc')
