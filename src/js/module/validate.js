@@ -3,6 +3,8 @@ import { clearClass, stopScroll } from "../utils/defFunc.js";
 export const validateForm = (e) => {
     e.preventDefault();
 
+    // Накидано за последние 10мин + стили...... ведутся работы
+
     const blockInputs = document.querySelectorAll('.modal-help__inp-block');
     const userName = document.querySelector('#helpModalName');
     const userEmail = document.querySelector('#helpModalEmail');
