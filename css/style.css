@@ -235,6 +235,7 @@ input, button {
   gap: 23px;
 }
 .modal-help__form-body input, .modal-help__form-body textarea {
+  width: 100%;
   font-style: italic;
   font-size: 18px;
 }
