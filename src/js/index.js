@@ -9,3 +9,4 @@ toggleMobNavbar();
 toggleHelpModal();
 
 btnHelpForm?.addEventListener('click', validateForm);
+toggleMobNavbar()
